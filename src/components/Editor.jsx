@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FormLayout, TextField, Button } from "@shopify/polaris";
+import PropTypes from "prop-types";
 import "./Editor.css";
 import {
   UploadMajor, ClipboardMinor, InstallMinor, CircleCancelMajor,
@@ -10,9 +11,8 @@ function Editor({
   updatedJson,
   error,
   clearJsonCode,
-  setJsonCode,
 }) {
-  const [text, setText] = useState("");
+  const [setText] = useState("");
   const [isCopied, setIsCopied] = useState(false);
   const [selectedFileName, setSelectedFileName] = useState("");
 
@@ -150,5 +150,15 @@ function Editor({
     </FormLayout>
   );
 }
+
+Editor.propTypes = {
+  jsonCode: PropTypes.func,
+  onJsonChange: PropTypes.func,
+  updatedJson: PropTypes.func,
+  error: PropTypes.func,
+  clearJsonCode: PropTypes.func,
+  setJsonCode: PropTypes.func,
+};
+
 
 export default Editor;

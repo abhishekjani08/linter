@@ -17,11 +17,9 @@ module.exports = {
       { allowConstantExport: true },
     ],
     //Rules added
-    'no-console': 'error',
     'no-unused-vars': 'warn',
     'no-var': 'error',
     'prefer-const': 'warn',
-    'quotes': ['error', 'double'],
     'semi': 'error',
     'comma-dangle': ['error', 'always-multiline'],
     'indent': ['error', 2],
