@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { FormLayout, TextField, Button } from "@shopify/polaris";
 import "./Editor.css";
 import {
-  UploadMajor, ClipboardMinor, InstallMinor, CircleCancelMajor
-} from '@shopify/polaris-icons';
+  UploadMajor, ClipboardMinor, InstallMinor, CircleCancelMajor,
+} from "@shopify/polaris-icons";
 function Editor({
   jsonCode,
   onJsonChange,
@@ -145,8 +145,6 @@ function Editor({
               {error ? "Error" : isCopied ? "Copied" : "Copy JSON to Clipboard"}
             </Button>
           </div>
-
-          
         </div>
       </div>
     </FormLayout>
